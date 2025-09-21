@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<base href="/"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ETS Group — Dubbing, localisation, production, audio, licensing, publishing and distribution." name="description"/>
+<title>Home · ETS Group</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/styles.css" rel="stylesheet"/>
+<!-- Mobile hero centering (hard override) -->
+<style>
+  @media (max-width: 900px){
+    .hero .hero-grid{ display:grid!important; grid-template-columns:1fr!important; align-items:center!important; gap:20px!important; }
+    .hero-media{ order:2!important; display:flex!important; justify-content:center!important; }
+    .hero-art{ width:min(420px,92vw)!important; margin:0 auto!important; }
+    .hero-img{ display:block!important; width:100%!important; height:auto!important; object-fit:cover!important; object-position:center!important; margin:0 auto!important; }
+  }
+  </style>
+<script defer="" src="/assets/js/nav.js"></script>
+<style>
+/* Services thumbnails center/cover */
+#services .services-grid .card > .thumb{
+  background-position:center center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  display:block !important;
+  width:100% !important;
+}
+/* Mobile: two independent horizontal rows */
+@media (max-width:767px){
+  #services .services-grid{display:grid!important;grid-template-columns:1fr!important;gap:16px!important}
+  #services .services-grid .services-row{display:flex!important;gap:14px!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important;scroll-snap-type:x mandatory!important;padding-bottom:6px!important}
+  #services .services-grid .services-row::-webkit-scrollbar{display:none}
+  #services .services-grid .services-row .card{min-width:82%!important;flex:0 0 auto!important;scroll-snap-align:start!important}
+}
+/* Desktop/tablet: EXACTLY 3 columns (2 rows x 3 cards) */
+@media (min-width:768px){
+  #services .services-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important}
+  #services .services-grid .services-row{display:contents!important}
+  #services .services-grid .services-row .card{min-width:0!important}
+}
+
+/* Client banner */
+.section.clients-wrap .logo-marquee{
+  --marquee-speed:60s!important;
+  overflow:hidden!important;
+  position:relative!important;
+}
+.section.clients-wrap .logo-marquee .track{
+  display:flex!important;align-items:center!important;gap:64px!important;
+  width:max-content!important;will-change:transform!important;
+  animation: marqueeHover var(--marquee-speed) linear infinite !important;
+}
+.section.clients-wrap .logo-marquee .logos{display:inline-flex!important;align-items:center!important;gap:64px!important}
+.section.clients-wrap .logo-marquee .logo-cell img{display:block!important;height:56px!important;width:auto!important;filter:grayscale(100%) contrast(105%) brightness(105%)!important;opacity:.95!important}
+@media (max-width:1023px){
+  .section.clients-wrap .logo-marquee{--marquee-speed:50s!important}
+  .section.clients-wrap .logo-marquee .logo-cell img{height:44px!important}
+}
+@media (max-width:640px){
+  .section.clients-wrap .logo-marquee{--marquee-speed:40s!important}
+  .section.clients-wrap .logo-marquee .logo-cell img{height:36px!important}
+}
+@keyframes marqueeHover{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Hover color for 'Find out more / Read more' links on services & case cards */
+#services .card .link:hover,
+.section.cases .card .link:hover,
+.featured-cases .card .link:hover,
+.cases-wrap .card .link:hover,
+.case-card .link:hover,
+a.link.read-more:hover {
+  color: var(--brand) !important;
+}
+#services .card .link,
+.section.cases .card .link,
+.featured-cases .card .link,
+.cases-wrap .card .link,
+.case-card .link,
+a.link.read-more {
+  transition: color .15s ease;
+}
+</style></head>
+<body>
+<div class="site-wrap">
+<!-- Header -->
+<header>
+<div class="container nav">
+<a class="brand" href="/">
+<picture>
+<source src="/assets/img/logo-horizontal.webp" type="image/webp"/>
+<img alt="ETS Group" class="brand-logo" src="/assets/img/logo-horizontal.png"/>
+</picture>
+</a>
+<button aria-expanded="false" aria-label="Menu" class="mobile-toggle">
+<span></span><span></span><span></span>
+</button>
+<nav class="menu">
+<div class="menu-group"><a aria-expanded="false" aria-haspopup="true" class="top no-nav" href="#">About us</a>
+<div class="dropdown">
+<a href="/about/values-history.html">Values &amp; history</a>
+<a href="/about/executive-team.html">Executive team</a>
+</div>
+</div>
+<div class="menu-group"><a aria-expanded="false" aria-haspopup="true" class="top no-nav" href="#">Services</a>
+<div class="dropdown wide">
+<div class="label">ETS Studios</div>
+<a href="/services/dubbing-localisation.html">Dubbing &amp; Localisation</a>
+<a href="/services/production.html">Production</a>
+<a href="/services/audio-mix-editing.html">Audio Mix &amp; Editing</a>
+<div class="label">ETS Licensing</div>
+<a href="/services/licensing.html">Licensing</a>
+<div class="label">ETS Publishing</div>
+<a href="/services/publishing-games.html">Publishing &amp; Games</a>
+<div class="label">ETS Distribution</div>
+<a href="/services/distribution.html">Distribution</a>
+</div>
+</div>
+<div class="menu-group"><a aria-expanded="false" aria-haspopup="true" class="top no-nav" href="#">Case studies</a>
+<div class="dropdown">
+<a href="/cases/dubbing-localisation.html">Dubbing &amp; Localisation</a>
+<a href="/cases/production.html">Production</a>
+<a href="/cases/audio-mix-editing.html">Audio Mix &amp; Editing</a>
+<a href="/cases/licensing.html">Licensing</a>
+<a href="/cases/publishing-games.html">Publishing &amp; Games</a>
+<a href="/cases/distribution.html">Distribution</a>
+</div>
+</div>
+<div class="menu-group"><a class="top" href="/contact/">Contact</a></div>
+</nav>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero section">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Make it happen</div>
+<h1>Delivering Quality since 1967</h1>
+<p class="lead">From studios in Rome &amp; Milan, ETS Group brings together dubbing &amp; localisation, production, audio post, distribution, licensing and publishing. One team, aligned schedules—and faster releases.</p>
+</div>
+<div class="hero-media">
+<div class="hero-art">
+<img alt="" class="hero-img" src="/assets/img/service-dubbing.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- FORCE-ANIMATED DIVIDER (desktop + mobile, each line independent) -->
+<style>
+      /* Local, guaranteed keyframes */
+      @keyframes etsWave {
+        0%   { transform: translateY(0) translateX(0); }
+        25%  { transform: translateY(6px) translateX(4px); }
+        50%  { transform: translateY(0) translateX(0); }
+        75%  { transform: translateY(-6px) translateX(-4px); }
+        100% { transform: translateY(0) translateX(0); }
+      }
+      /* Base SVG sizing */
+      .swoosh-divider svg { width:100%; height:auto; display:block; }
+      /* If anything elsewhere pauses/clears animation, this wins */
+      .swoosh-divider path {
+        transform-origin:50% 50%;
+        transform-box: fill-box;
+        will-change: transform;
+      }
+    </style>
+<div aria-hidden="true" class="swoosh-divider">
+<svg aria-label="" focusable="false" preserveaspectratio="none" role="img" viewbox="0 0 1200 110">
+<!-- Inline animation so it wins over any stylesheet -->
+<path class="s1" d="M0 35  C 220 20, 480 50, 760 30  S 1060 40, 1200 36" style="animation: etsWave 2.4s ease-in-out infinite !important;"></path>
+<path class="s2" d="M0 55  C 220 40, 480 70, 760 50  S 1060 60, 1200 56" style="animation: etsWave 2.7s ease-in-out infinite !important; animation-delay:-.35s !important;"></path>
+<path class="s3" d="M0 75  C 220 60, 480 90, 760 70  S 1060 80, 1200 76" style="animation: etsWave 3.0s ease-in-out infinite !important; animation-delay:-.65s !important;"></path>
+<path class="s4" d="M0 95  C 220 80, 480 110, 760 90 S 1060 100, 1200 96" style="animation: etsWave 2.5s ease-in-out infinite !important; animation-delay:-.95s !important; opacity:.65;"></path>
+</svg>
+</div>
+<!-- SERVICES -->
+<section class="section" data-reveal="" id="services">
+<div class="container section-head">
+<h2>Services</h2>
+<p class="muted">Six connected pillars managed by one team.</p>
+</div>
+<div class="container grid services-grid">
+
+
+
+
+
+
+<div class="services-row" data-row="A"><article class="card">
+<div class="thumb" style="background-image:url('/assets/img/hero-landing.jpg'); height:180px;"></div>
+<h3>Dubbing &amp; Localisation</h3>
+<p>Italian dubbing and multilingual coordination—from script adaptation to voice direction and QC.</p>
+<a class="link" href="/services/dubbing-localisation.html">Find out more about Dubbing &amp; Localisation</a>
+</article><article class="card">
+<div class="thumb" style="background-image:url('/assets/img/service-audio.jpg'); height:180px;"></div>
+<h3>Audio Mix &amp; Editing</h3>
+<p>Editorial, SFX, Foley and mixes for broadcast, theatrical and streaming platforms.</p>
+<a class="link" href="/services/audio-mix-editing.html">Find out more about Audio Mix &amp; Editing</a>
+</article><article class="card">
+<div class="thumb" style="background-image:url('/assets/img/service-production.jpg'); height:180px;"></div>
+<h3>Production</h3>
+<p>Support across offline/online, conforms and creative versioning for campaigns and long‑form.</p>
+<a class="link" href="/services/production.html">Find out more about Production</a>
+</article></div><div class="services-row" data-row="B"><article class="card">
+<div class="thumb" style="background-image:url('/assets/img/service-distribution.jpg'); height:180px;"></div>
+<h3>Distribution</h3>
+<p>Secure deliveries and packaging to networks, streamers and local broadcasters.</p>
+<a class="link" href="/services/distribution.html">Find out more about Distribution</a>
+</article><article class="card">
+<div class="thumb" style="background-image:url('/assets/img/service-licensing.jpg'); height:180px;"></div>
+<h3>Licensing</h3>
+<p>Brand and content licensing, approvals and rights management for campaigns and releases.</p>
+<a class="link" href="/services/licensing.html">Find out more about Licensing</a>
+</article><article class="card">
+<div class="thumb" style="background-image:url('/assets/img/service-publishing.jpg'); height:180px;"></div>
+<h3>Publishing &amp; Games</h3>
+<p>Publishing admin and clearances for media, music and interactive (games) projects.</p>
+<a class="link" href="/services/publishing-games.html">Find out more about Publishing &amp; Games</a>
+</article></div></div>
+</section>
+<!-- CLIENT BANNER -->
+<section class="section clients-wrap" data-reveal="">
+<div class="container" style="margin-bottom:12px">
+<div class="eyebrow">Some of our clients</div>
+</div>
+<div class="logo-marquee" style="--marquee-speed: 16s;">
+<div class="track">
+<!-- ROW A -->
+<div class="logos">
+<div class="logo-cell"><img alt="" src="/assets/img/clients/universal.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/fox.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/rai.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/mediaset.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/paramount.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/mtv.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/cartoon_network.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/national_geographic.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/disney_channel.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/sky.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/history_channel.png"/></div>
+</div>
+<!-- ROW B (duplicate for seamless loop) -->
+<div aria-hidden="true" class="logos">
+<div class="logo-cell"><img alt="" src="/assets/img/clients/universal.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/fox.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/rai.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/mediaset.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/paramount.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/mtv.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/cartoon_network.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/national_geographic.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/disney_channel.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/sky.png"/></div>
+<div class="logo-cell"><img alt="" src="/assets/img/clients/history_channel.png"/></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED -->
+<section class="section" data-reveal="" id="featured">
+<div class="container section-head"><h2>Featured case studies</h2></div>
+<div class="container grid cols-2">
+<article class="card">
+<h3><a class="link" href="/cases/dubbing-localisation.html">Drama series — full Italian dub</a></h3>
+<p>Complete dub, editorial and 7.1 mix. Talent casting and platform‑spec deliveries.</p>
+<a class="link" href="/cases/dubbing-localisation.html">Read more</a>
+</article>
+<article class="card">
+<h3><a class="link" href="/cases/audio-mix-editing.html">Docu‑series — precise dialogue editing</a></h3>
+<p>Dialogue clean‑up and M&amp;E creation for international versions, loudness compliant.</p>
+<a class="link" href="/cases/audio-mix-editing.html">Read more</a>
+</article>
+<article class="card">
+<h3><a class="link" href="/cases/licensing.html">Pan‑EU campaign — rights &amp; licensing</a></h3>
+<p>Multi‑market approvals, music clearances and transparent usage reporting.</p>
+<a class="link" href="/cases/licensing.html">Read more</a>
+</article>
+<article class="card">
+<h3><a class="link" href="/cases/publishing-games.html">Game title — VO &amp; publishing setup</a></h3>
+<p>Multilingual VO coordination aligned to dev milestones with royalty reporting.</p>
+<a class="link" href="/cases/publishing-games.html">Read more</a>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer>
+<div class="container footer-grid">
+<div>
+<a class="brand" href="/">
+<img alt="ETS Group" class="brand-logo" src="/assets/img/logo-horizontal.png"/>
+</a>
+<div class="foot-line">© <span id="year"></span> ETS Group. All rights reserved.</div>
+<div class="foot-line">Via Circonvallazione Clodia, 3C — 00195 Rome · Via Andrea Appiani, 3 — Milano</div>
+<div class="foot-line">Tel. (+39) 06 3973 7869 / 97 · <a href="mailto:info@etsitaly.com">info@etsitaly.com</a></div>
+</div>
+<div class="footer-links">
+<h5>Services</h5>
+<a href="/services/dubbing-localisation.html">Dubbing &amp; Localisation</a>
+<a href="/services/production.html">Production</a>
+<a href="/services/audio-mix-editing.html">Audio Mix &amp; Editing</a>
+<a href="/services/distribution.html">Distribution</a>
+<a href="/services/licensing.html">Licensing</a>
+<a href="/services/publishing-games.html">Publishing &amp; Games</a>
+</div>
+<div class="footer-links">
+<h5>Company</h5>
+<a href="/about/">About us</a>
+<a href="/about/values-history.html">Values &amp; history</a>
+<a href="/about/executive-team.html">Executive team</a>
+<a href="/cases/">Case studies</a>
+<a href="/contact/">Contact</a>
+</div>
+<div class="footer-links">
+<h5>Legal</h5>
+<a href="/legal/legal-notice.html">Legal notice</a>
+<a href="/legal/privacy-policy.html">Privacy policy (GDPR)</a>
+<a href="/legal/cookie-policy.html">Cookie policy</a>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  // Set current year in footer
+  document.getElementById('year')&&(document.getElementById('year').textContent=new Date().getFullYear());
+</script>
+</body>
+</html>
